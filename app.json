@@ -1,0 +1,26 @@
+{
+  "name": "Actually Search Bot",
+  "env": {
+    "LITA_ENV": {
+      "required": "true",
+      "value": "production"
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "required": "true"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "addons": [
+    "heroku-redis:hobby-dev"
+  ]
+}
