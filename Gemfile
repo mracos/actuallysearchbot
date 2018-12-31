@@ -2,6 +2,10 @@ source "https://rubygems.org"
 
 gem "lita"
 
+group :production do
+  gem "lita-telegram-plus"
+end
+
 # Uncomment to use the HipChat adapter
 # gem "lita-hipchat"
 
