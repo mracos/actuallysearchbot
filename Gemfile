@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "lita"
+gem "google_search_results"
 
 group :production do
   gem "lita-telegram-plus"
