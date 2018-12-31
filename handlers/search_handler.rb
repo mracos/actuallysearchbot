@@ -15,8 +15,11 @@ module Lita
         results = GoogleSearchResults.new(q: query)
                     .get_hash[:organic_results]
 
-        results.each do |result|
+        response.reply "Sending #{results.size} results"
+
+        results.each_with_index do |result, index|
           response.reply <<~RESPONSE
+            #{index + 1} - #{results.size}
             #{result[:title]}
             #{result[:snippet]}
             #{result[:link]}
