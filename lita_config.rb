@@ -13,6 +13,7 @@ Lita.configure do |config|
     config.robot.adapter = :telegram_plus
     config.adapters.telegram_plus.token = ENV["TELEGRAM_BOT_TOKEN"]
     config.redis["url"] = ENV["REDIS_URL"]
+    config.http.port = ENV["PORT"]
   else
     config.robot.adapter = :shell
     config.robot.log_level = :info
