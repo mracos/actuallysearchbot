@@ -19,3 +19,5 @@ Lita.configure do |config|
     # config.redis["url"] = "redis://localhost:6379"
   end
 end
+
+require_relative 'handlers/search_handler'
